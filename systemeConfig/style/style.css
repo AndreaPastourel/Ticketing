@@ -1,0 +1,514 @@
+/* Style général pour la page */
+body {
+    background: url('/systemeConfig/image/bg1.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #2C3E50; /* Couleur sombre élégante */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Couleur claire */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3498db; /* Bleu clair pour effet de survol */
+    color: #fff;
+}
+
+nav ul li a.active {
+    background-color: #2980b9;
+    font-weight: bold;
+}
+/* Style général pour le formulaire de connexion */
+.connexion {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.connexion h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+/* Table du formulaire */
+.connexion table {
+    width: 100%;
+    border-spacing: 10px;
+    margin: 0 auto;
+}
+
+.connexion table td {
+    vertical-align: middle;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left;
+    color: #333;
+}
+
+/* Champs de formulaire */
+.connexion input[type="text"],
+.connexion input[type="password"],
+.connexion input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.connexion input[type="text"]:focus,
+.connexion input[type="password"]:focus {
+    border: 1px solid #3498db;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Bouton de soumission */
+.connexion input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.connexion input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Conteneur pour le champ mot de passe */
+.password-container {
+    position: relative;
+}
+
+.password-container input[type="password"] {
+    padding-right: 40px; /* Pour inclure l'icône */
+}
+
+.password-container i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.password-container i:hover {
+    color: #2980b9;
+}
+
+/* Messages d'erreur */
+.connexion span {
+    font-size: 0.9rem;
+    color: red;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .connexion {
+        padding: 20px;
+    }
+
+    .connexion h2 {
+        font-size: 1.8rem;
+    }
+
+    .connexion table td {
+        font-size: 0.9rem;
+    }
+}
+/* Section CRUD */
+.crud {
+    max-width: 90%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.crud h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.crud p a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.crud p a:hover {
+    background-color: #2ecc71;
+}
+
+/* Table CRUD */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Liens d'action dans le tableau */
+table td a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+table td a:first-child {
+    background-color: #3498db;
+    color: white;
+}
+
+table td a:first-child:hover {
+    background-color: #2980b9;
+}
+
+table td a:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+table td a:last-child:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .crud {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Style général pour les formulaires de la classe FormCrud */
+.FormCrud {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.FormCrud h2 {
+    font-size: 2rem;
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.FormCrud p a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.FormCrud p a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Table du formulaire dans FormCrud */
+.FormCrud table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+.FormCrud table td {
+    vertical-align: middle;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* Ajustement des tables spécifiques à FormCrud */
+.FormCrud table {
+    width: 100%;
+    border-spacing: 10px;
+    margin: 0 auto;
+}
+
+.FormCrud table td {
+    vertical-align: middle;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left; /* Alignement à gauche pour les labels */
+    background-color: #f9f9f9;
+}
+
+.FormCrud table td:nth-child(1) {
+    width: 30%; /* Largeur fixe pour les colonnes des labels */
+    font-weight: bold;
+    color: #333;
+}
+
+.FormCrud table td:nth-child(2) {
+    width: 70%; /* Largeur pour les champs de formulaire */
+}
+
+/* Champs de formulaire pour FormCrud */
+.FormCrud input[type="text"],
+.FormCrud input[type="password"],
+.FormCrud input[type="datetime-local"],
+.FormCrud select,
+.FormCrud input[type="email"],
+.FormCrud input[type="file"] {
+    width: 100%; /* Assure que les champs remplissent la colonne */
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+/* Responsive Design pour FormCrud */
+@media (max-width: 768px) {
+    .FormCrud {
+        padding: 20px;
+    }
+
+    .FormCrud table {
+        font-size: 0.9rem;
+    }
+
+    .FormCrud input[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+/* Style pour le bouton Retour */
+.btn-retour {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #266765; /* Vert pour le bouton ajouter */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;}
+
+.btn-retour:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+/* Style pour le bouton Ajouter */
+.btn-ajouter {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50; /* Vert pour le bouton ajouter */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ajouter:hover {
+    background-color: #45a049;
+}
+
+/* Conteneur principal */
+.ticket {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Titre principal */
+.ticket h2 {
+    font-size: 2rem;
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Lien pour ouvrir un ticket */
+.ticket a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ticket a:hover {
+    background-color: #2980b9;
+}
+
+/* Message vide */
+.ticket p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* Tableau des tickets */
+.ticket table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.ticket th, .ticket td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.ticket th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+.ticket tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.ticket tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Statut en couleur */
+.ticket .status-attente {
+    color: white;
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ticket .status-traité {
+    color: white;
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
